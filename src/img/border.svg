@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="SVGDoc" width="255" height="216" xmlns="http://www.w3.org/2000/svg" version="1.1"
+     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 255 216">
+    <defs>
+        <clipPath id="ClipPath1027">
+            <path d="M24.99988,-0.00305l204.99996,8.00002c13.80718,0 25.00008,11.19294 25.00008,24.99992v158.00014c0,13.80697 -11.19289,24.99992 -25.00008,24.99992h-204.99996c-13.80718,0 -24.99996,-11.19294 -24.99996,-24.99992v-166.00016c0,-13.80697 11.19278,-24.99992 24.99996,-24.99992z"
+                  fill="#ffffff"></path>
+        </clipPath>
+    </defs>
+    <desc>Generated with Avocode.</desc>
+    <g>
+        <g>
+            <title>Прямоугольник, скругл. углы 3 копия 7</title>
+            <path d="M24.99988,-0.00305l204.99996,8.00002c13.80718,0 25.00008,11.19294 25.00008,24.99992v158.00014c0,13.80697 -11.19289,24.99992 -25.00008,24.99992h-204.99996c-13.80718,0 -24.99996,-11.19294 -24.99996,-24.99992v-166.00016c0,-13.80697 11.19278,-24.99992 24.99996,-24.99992z"
+                  fill-opacity="0" fill="#ffffff" stroke-dashoffset="0" stroke-dasharray="" stroke-linejoin="miter"
+                  stroke-linecap="butt" stroke-opacity="1" stroke="#dedeed" stroke-miterlimit="20" stroke-width="2"
+                  clip-path="url(&quot;#ClipPath1027&quot;)"></path>
+        </g>
+    </g>
+</svg>

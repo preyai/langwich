@@ -1,0 +1,327 @@
+@import "variables";
+
+.custom-slide {
+  background-image: url('../img/slide-1.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__content {
+    max-width: 700px;
+
+  }
+
+  &__title {
+    color: #000066;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin: 30px 0;
+  }
+
+  &__text {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.42px;
+    margin: 30px 0;
+  }
+}
+
+.polygon-block {
+  gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+
+
+  &__item {
+    flex-basis: calc(50% - 15px);
+    padding: 2px;
+    background: #dedeed;
+    clip-path: $poligon;
+
+    &_wrap {
+      position: relative;
+      clip-path: $poligon;
+      background-color: #fff;
+      height: 100%;
+      text-align: center;
+      padding: 60px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000066;
+    }
+
+    span {
+      color: #ff0000;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 20px;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    text-stroke: 2px #babadf;
+    -webkit-text-stroke: 2px #babadf;
+    color: transparent;
+    font-size: 48px;
+    font-weight: 900;
+  }
+
+  &_2col {
+  }
+
+  &_4col {
+    .polygon-block {
+      &__item {
+        flex-basis: calc(25% - 90px / 4);
+
+        &:hover {
+          background-color: transparentize(#dedeed, .4);
+
+          .polygon-block__number {
+            text-stroke: 2px #000066;
+            -webkit-text-stroke: 2px #000066;
+            color: #000066;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.speaker-card {
+  &__avatar {
+    border: 1px solid #babad3;
+    border-radius: 50%;
+    padding: 6px;
+    margin: 0 auto -80px;
+    position: relative;
+    z-index: 2;
+    max-width: 160px;
+    height: 160px;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__info-wrap {
+    max-width: 280px;
+    padding: 100px 20px 20px;
+    margin: 0 auto;
+    background-color: #f3f3fc;
+    clip-path: $poligon;
+    text-align: center;
+    color: #5c5c89;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+  }
+
+  &__name {
+    color: #000066;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 0.56px;
+    margin-bottom: 30px;
+  }
+
+  &__flag {
+    width: 41px;
+    height: 25px;
+    background-image: url('../img/lang-en.png');
+  }
+
+  &__country {
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: #5c5c89;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.46px;
+    padding-bottom: 16px;
+  }
+
+  &__descr {
+    border-top: solid 2px #d3d3eb;
+    padding: 15px 0;
+
+    div {
+      &:first-child {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__more {
+    background: unset;
+    border: unset;
+    text-decoration: underline dashed;
+    color: #5c5c89;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    &:after {
+      content: url('../img/arrow-0.svg');
+    }
+  }
+
+  &__fav {
+    background-color: #dedeed;
+    border: unset;
+    border-radius: 50%;
+    padding: 14px;
+
+    &:before {
+      content: url('../img/ico-star.png');
+    }
+  }
+
+  &:hover {
+    .speaker-card {
+
+      &__info-wrap {
+        background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+        color: #babad3;
+      }
+
+      &__name {
+        color: #ffffff;
+      }
+
+
+      &__country {
+        color: #ffffff;
+      }
+
+      &__descr {
+        border-color: transparentize(#ffffff, .88);
+
+        div {
+          &:first-child {
+            color: #ffffff;
+          }
+        }
+      }
+
+      &__more {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.pay-form {
+  select {
+    border: unset;
+    outline: unset;
+    background: unset;
+  }
+
+  &__wrap {
+    clip-path: $poligon;
+    background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+    padding: 50px;
+    position: relative;
+  }
+
+  &__selects {
+    gap: 15px;
+    flex: 1;
+  }
+
+  &__input {
+    flex: 1;
+
+    label {
+      color: #9494e4;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.9px;
+    }
+
+    select {
+      display: block;
+      width: 100%;
+      border-bottom: solid 1px #5858d9;
+      color: #ffffff;
+      padding: 10px 0;
+
+
+    }
+    option {
+      color: #0a0a6e;
+    }
+  }
+
+  &__draft {
+    margin-left: 50px;
+  }
+
+  &__price {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 17px;
+    background-color: #72bf89;
+    padding: 12px 25px;
+    border-radius: 30px;
+    width: max-content;
+    margin-top: 20px;
+  }
+
+  &__sum {
+    color: #ffffff;
+    font-size: 52px;
+    font-weight: 300;
+  }
+
+  &__info {
+    padding-left: 120px;
+
+    p {
+      color: #babad3;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    img {
+      position: absolute;
+      left: -2px;
+      bottom: -2px;
+    }
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+
+    &:after {
+      content: "";
+      background-image: url('../img/pay-arrow.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      width: 33px;
+      height: 21px;
+    }
+  }
+
+}

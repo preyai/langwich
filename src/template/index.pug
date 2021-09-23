@@ -1,0 +1,165 @@
+extends ./layouts/main
+
+block content
+    .bgr-blue
+        .container
+            include ./includes/slider
+    .container
+        h2 Why Langwich?
+        p.text-center.text-narrow.mb-2 Не удивляйтесь – я тоже учился в школе.
+            br
+            | Отметки были хороши, но говорить по-английски без стеснения я научился в Клубе.
+            br
+            | Свобода! Вот что отличает обучение здесь. Вы вольны выбирать преподавателя, время, тему и продолжительность класса.
+        .d-flex
+            .flex-1
+                img(src=require('../img/img-0.png'))
+            .flex-1
+                .d-flex.polygon-block
+                    .polygon-block__item
+                        .polygon-block__item_wrap
+                            img(src=require('../img/icowhy-1.png'))
+                            | Доступная цена
+                            br
+                            span от 450 рублей/класс
+                    .polygon-block__item
+                        .polygon-block__item_wrap
+                            img(src=require('../img/icowhy-2.png'))
+                            | Различный
+                            br
+                            span формат уроков –
+                            br
+                            | 25 или 50 минут
+                    .polygon-block__item
+                        .polygon-block__item_wrap
+                            img(src=require('../img/icowhy-3.png'))
+                            | Опора
+                            | на разговорный язык и
+                            br
+                            span приятная атмосфера
+                    .polygon-block__item
+                        .polygon-block__item_wrap
+                            img(src=require('../img/icowhy-4.png'))
+                            | Занятия в любое
+                            br
+                            span удобное время
+    .container
+        h2 Спикеры – лидеры рейтинга:
+        p.text-center Спикеры со всего мира готовы пообщаться с Вами на любую тему!
+        .d-flex.speakers
+            .flex-25
+                .speaker-card
+                    .speaker-card__avatar
+                        img(src=require('../img/speaker-0.png'))
+                    .speaker-card__info-wrap
+                        .speaker-card__name Александр
+                        .d-flex.speaker-card__country
+                            .speaker-card__flag
+                            | Великобритания
+                        .speaker-card__descr
+                            div Проводит классы для:
+                            div Детей, подростков, взрослых
+                        .speaker-card__descr
+                            div Любимые темы:
+                            div Путешествия, спорт ...
+                                button.speaker-card__more Ещё
+                        .speaker-card__descr
+                            div Владеет языками:
+                            div Русским, французским испанским
+                        .d-flex.flex-between
+                            button.btn.btn-2 Подробнее
+                            button.speaker-card__fav
+            .flex-25
+                .speaker-card
+                    .speaker-card__avatar
+                        img(src=require('../img/speaker-0.png'))
+                    .speaker-card__info-wrap
+                        .speaker-card__name Александр
+                        .d-flex.speaker-card__country
+                            .speaker-card__flag
+                            | Великобритания
+                        .speaker-card__descr
+                            div Проводит классы для:
+                            div Детей, подростков, взрослых
+                        .speaker-card__descr
+                            div Любимые темы:
+                            div Путешествия, спорт ...
+                                button.speaker-card__more Ещё
+                        .speaker-card__descr
+                            div Владеет языками:
+                            div Русским, французским испанским
+                        .d-flex.flex-between
+                            button.btn.btn-2 Подробнее
+                            button.speaker-card__fav
+            .flex-25
+                .speaker-card
+                    .speaker-card__avatar
+                        img(src=require('../img/speaker-0.png'))
+                    .speaker-card__info-wrap
+                        .speaker-card__name Александр
+                        .d-flex.speaker-card__country
+                            .speaker-card__flag
+                            | Великобритания
+                        .speaker-card__descr
+                            div Проводит классы для:
+                            div Детей, подростков, взрослых
+                        .speaker-card__descr
+                            div Любимые темы:
+                            div Путешествия, спорт ...
+                                button.speaker-card__more Ещё
+                        .speaker-card__descr
+                            div Владеет языками:
+                            div Русским, французским испанским
+                        .d-flex.flex-between
+                            button.btn.btn-2 Подробнее
+                            button.speaker-card__fav
+            .flex-25
+                img(src=require('../img/temp-1.png'))
+
+    .container
+        h2 Клуб, а
+            span(style={color: '#ff0000'})  не школа...
+        p.text-center.text-narrow
+            | Общение со Спикером длится
+            strong  25
+            |  или
+            strong  50
+            |  минут на Ваше усмотрение.
+            | В любом месте и в удобное для себя время изучайте язык и получайте удовольствие от общения на английском.
+            | Всё просто – следуйте моим подсказкам!
+        .d-flex.polygon-block.polygon-block_4col
+            .polygon-block__item
+                .polygon-block__item_wrap
+                    img(src=require('../img/icoclub-1.png'))
+                    | Регистрируйтесь
+                    br
+                    | на сайте
+                    .polygon-block__number 1
+            .polygon-block__item
+                .polygon-block__item_wrap
+                    img(src=require('../img/icoclub-2.png'))
+                    | Выбирайте
+                    br
+                    | Спикера и время
+                    .polygon-block__number 2
+            .polygon-block__item
+                .polygon-block__item_wrap
+                    img(src=require('../img/icoclub-3.png'))
+                    | Оплачивайте
+                    br
+                    | класс
+                    .polygon-block__number 3
+            .polygon-block__item
+                .polygon-block__item_wrap
+                    img(src=require('../img/icoclub-4.png'))
+                    | Наслаждайтесь
+                    br
+                    | обучением и общением
+                    .polygon-block__number 4
+
+    .container {
+        h2 Классы по 25 и 50 минут с выгодой!
+        p.text-center Выберите длительность и стоимость класса
+        include ./includes/payform
+    .container
+        h2 Я кое-что затеял...

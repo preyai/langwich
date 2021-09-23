@@ -1,0 +1,40 @@
+- var sections = [{title:"Уведомления", icon: require('../../img/menu-notice.png')},{title:"Классы", icon: require('../../img/menu-calendar.png')},{title:"Уведомления", icon: require('../../img/menu-notice.png')}]
+- var menu = ['Спикеры', 'Стоимость', 'ЛэнгТоп','FAQ','О клубе']
+header
+    .container
+        .d-flex.flex-between.align-items-center
+            nav.sections
+                each item in sections
+                    a.sections__item(href="#")
+                        img.sections__icon(src=item.icon, alt="")
+                        .sections__title=item.title
+            .d-flex.person-header
+                .personal-info
+                    .personal-info__title Место в рейтинге:
+                    .personal-info__value 14 место
+                .personal-info
+                    .personal-info__title Мой Баланс:
+                    .personal-info__value 1 500 000 руб.
+        .d-flex.header-second
+            a.logo
+                img.logo__image(src=require('../../img/logo.png') alt='logo')
+                .logo__text
+                    div Клуб
+                    div
+                        span английского
+                        |  языка
+            div.header-lines
+                .header-info
+                    .lang
+                        .lang__flag.lang__flag_ru
+                        .lang__title Rus
+                    .city Екатеринбург
+                    .time 14:55
+                    .user
+                        .user__avatar
+                            img(src=require('../../img/avatar.png') alt='avatar')
+                        .user__login ExampleLongNick
+                nav.main-menu
+                    each item in menu
+                        a.main-menu__item(href='#')=item
+                    a.main-menu__item.main-menu__item_more(href='#') Еще

@@ -1,0 +1,27 @@
+form.pay-form
+    .pay-form__wrap
+        .d-flex
+            .d-flex.flex-column.flex-1
+                .d-flex.pay-form__selects
+                    img(src=require('../../img/ico-cl.png'))
+                    .pay-form__input
+                        label Продолжительность класса
+                        select
+                            option 25 минут
+                            option 50 минут
+                    .pay-form__input
+                        label Набор
+                        select
+                            option 10 лэнг-коинов (классов)
+                            option 20 лэнг-коинов (классов)
+                .pay-form__info
+                    img(src=require('../../img/form-info.png'))
+                    p Учтите:
+                    p а) Монеты на текущий момент, не обмениваются!
+                    p б) Не подлежат возрату в денежном эквиваленте и выводу, за исключением
+                    p некоторых случаев, описанных в правилах!
+
+            .pay-form__draft
+                .pay-form__sum 3900 руб.
+                .pay-form__price 600 руб. за 1 класс
+                button.btn.btn-3 Приобрести

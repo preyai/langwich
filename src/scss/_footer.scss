@@ -1,0 +1,158 @@
+footer {
+  .gradient {
+    background-color: #000066;
+    background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+    border-radius: 20px;
+    padding-bottom: 200px;
+  }
+}
+
+.footer-menu {
+  @extend .align-items-center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+  &__item {
+    opacity: 0.75;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.7px;
+    text-decoration: none;
+    flex-basis: 25%;
+    padding: 10px 40px;
+
+    &:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+  }
+}
+
+.gr-line {
+  @extend .align-items-center;
+  gap: 40px;
+  padding: 20px 40px;
+  border-top: solid 1px transparentize(#ffffff, .9);
+  border-bottom: solid 1px transparentize(#ffffff, .9);
+
+  div, a {
+    text-decoration: none;
+    opacity: 0.75;
+    color: rgba(255, 255, 255, 0.79);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.35px;
+  }
+
+  div {
+    &:first-child {
+      margin-right: auto;
+    }
+  }
+
+  a {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.contact-info {
+  @extend .align-items-center;
+  gap: 16px;
+
+  &__icon {
+  }
+
+  &__text {
+    color: #010101;
+    font-size: 14px;
+    font-weight: 400;
+
+    :first-child {
+      color: #000066;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+  }
+}
+
+.socials {
+  @extend .align-items-center;
+  gap: 20px;
+
+  &__text {
+    color: #000066;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: right;
+    letter-spacing: 0.35px;
+    max-width: 80px;
+  }
+
+  &__list {
+    @extend .align-items-center;
+    gap: 10px;
+  }
+
+  &__item {
+  }
+}
+
+.big-socials {
+  height: 1px;
+  background-color: #dedeed;
+  @extend .align-items-center;
+  justify-content: center;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 60px;
+
+  &__list {
+    position: absolute;
+    @extend .align-items-center;
+    justify-content: center;
+    gap: 15px;
+
+    &:not(:hover) {
+      .big-socials__item {
+        &:nth-child(3) {
+          img {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+
+    img {
+      width: 42px;
+      height: 42px;
+      transition: .2s;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.payments {
+  margin: 30px 0;
+  @extend .align-items-center;
+  justify-content: center;
+  gap: 20px;
+
+  &__item {
+  }
+}
