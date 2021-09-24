@@ -6,3 +6,8 @@ import Splide from '@splidejs/splide';
 new Splide( '#banners', {
     arrows: false,
 } ).mount();
+
+document.querySelector('.header-notification__close').onclick = function () {
+    // alert(this.dataset.parent)
+    document.querySelector('#' + this.dataset.parent).remove();
+}

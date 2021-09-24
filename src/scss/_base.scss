@@ -176,6 +176,38 @@ img {
   }
 }
 
+.header-notification {
+  background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+  .d-flex {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 25px;
+  }
+  &__text{
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.85px;
+    strong {
+      color: #ff0000;
+    }
+  }
+  &__link{
+    color: #ffffff;
+    font-size: 17px;
+    letter-spacing: 0.85px;
+    text-decoration: underline dotted;
+    text-underline-offset: 5px;
+  }
+  &__close{
+    cursor: pointer;
+    margin-left: auto;
+    &:before {
+      content: url('../img/ico-close.svg');
+    }
+  }
+}
+
 .quest-form {
   flex: 1;
   clip-path: $poligon;
