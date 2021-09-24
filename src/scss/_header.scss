@@ -62,8 +62,13 @@ header {
 .person-header {
   gap: 40px;
 }
-.header-second {
-  gap: 50px;
+.header {
+  &-first {
+    background-color: #f3f3fc;
+  }
+  &-second {
+    gap: 50px;
+  }
 }
 .logo {
   display: flex;

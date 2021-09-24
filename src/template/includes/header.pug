@@ -1,20 +1,22 @@
 - var sections = [{title:"Уведомления", icon: require('../../img/menu-notice.png')},{title:"Классы", icon: require('../../img/menu-calendar.png')},{title:"Клиенты", icon: require('../../img/menu-client.png')},{title:"Расписание", icon: require('../../img/menu-timetable.png')},{title:"Рейтинг", icon: require('../../img/menu-rate.png')},{title:"Бонусы и акции", icon: require('../../img/menu-action.png')},{title:"Вывод средств", icon: require('../../img/menu-purse.png')}]
 - var menu = ['Спикеры', 'Стоимость', 'ЛэнгТоп','FAQ','О клубе']
 header
+    .header-first
+        .container
+            .d-flex.flex-between.align-items-center
+                nav.sections
+                    each item in sections
+                        a.sections__item(href="#")
+                            img.sections__icon(src=item.icon, alt="")
+                            .sections__title=item.title
+                .d-flex.person-header
+                    .personal-info
+                        .personal-info__title Место в рейтинге:
+                        .personal-info__value 14 место
+                    .personal-info
+                        .personal-info__title Мой Баланс:
+                        .personal-info__value 1 500 000 руб.
     .container
-        .d-flex.flex-between.align-items-center
-            nav.sections
-                each item in sections
-                    a.sections__item(href="#")
-                        img.sections__icon(src=item.icon, alt="")
-                        .sections__title=item.title
-            .d-flex.person-header
-                .personal-info
-                    .personal-info__title Место в рейтинге:
-                    .personal-info__value 14 место
-                .personal-info
-                    .personal-info__title Мой Баланс:
-                    .personal-info__value 1 500 000 руб.
         .d-flex.header-second
             a.logo
                 img.logo__image(src=require('../../img/logo.png') alt='logo')
