@@ -1,12 +1,13 @@
 @import 'variables';
 body {
   margin: 0;
-  font-family: "Acrom";
+  font-family: "Acrom", serif;
 
 }
 
 * {
   box-sizing: border-box;
+  text-underline-offset: 5px;
 }
 
 h2 {
