@@ -64,8 +64,23 @@ const config = {
                 ],
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+                test: /\.(eot|svg|ttf|woff|woff2|gif)$/i,
                 type: "asset",
+            },
+            {
+                test: /\.(|png|jpg)$/i,
+                use: [
+                    {
+                        loader: `img-optimize-loader`,
+                        options: {
+                            compress: {
+                                // This will transform your png/jpg into webp.
+                                webp: true,
+                                disableOnDevelopment: true,
+                            },
+                        },
+                    },
+                ],
             },
             {
                 test: /\.pug$/,
