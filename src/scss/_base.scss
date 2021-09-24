@@ -1,3 +1,4 @@
+@import 'variables';
 body {
   margin: 0;
   font-family: "Acrom";
@@ -36,7 +37,7 @@ p {
     margin: auto;
   }
 }
-
+.w {&-100 {width: 100%}}
 .mb {
   &-2 {
     margin-bottom: 40px;
@@ -70,6 +71,9 @@ img {
 .flex {
   &-between {
     justify-content: space-between;
+  }
+  &-center {
+    justify-content: center;
   }
   &-column {
     flex-direction: column;
@@ -143,6 +147,84 @@ img {
     font-weight: 700;
     text-transform: uppercase;
   }
+  &-4 {
+    mask: url('../img/btn-mask.png');
+    mask-size: 100% 100%;
+    background-color: #e6e6f9;
+    color: #000066;
+    padding:  25px 40px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.75px;
+    text-decoration: underline dotted;
+  }
+  &_arrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:after {
+      content: "";
+      background-image: url('../img/pay-arrow.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      width: 33px;
+      height: 21px;
+    }
+  }
 }
 
+.quest-form {
+  flex: 1;
+  clip-path: $poligon;
+  background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+  padding: 40px;
+  color: #fff;
+  &__row {
+    gap: 40px;
+  }
+  &__input {
+    flex: 1;
+    label {
+      display: flex;
+      flex-direction: column-reverse;
+      span {
+        color: #9494e4;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.6px;
+        opacity: 0;
+      }
+      input {
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 0.75px;
+        padding: 15px 0;
+        background: unset;
+        outline: unset;
+        border-top: unset;
+        border-left: unset;
+        border-right: unset;
+        border-bottom: solid 1px #5858d9;
+        &::placeholder {
+          color: #ffffff;
+        }
+        &:focus {
+          border-color: #ffffff;
+          +span {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  h3 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
 

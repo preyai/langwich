@@ -42,7 +42,7 @@ header {
     top: 100%;
     margin-top: 6px;
     opacity: 0;
-
+    width: max-content;
     &::before {
       content: "";
       display: block;

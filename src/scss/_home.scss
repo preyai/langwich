@@ -264,6 +264,7 @@
 
 
     }
+
     option {
       color: #0a0a6e;
     }
@@ -307,21 +308,53 @@
   }
 
   .btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     margin-top: 50px;
-
-    &:after {
-      content: "";
-      background-image: url('../img/pay-arrow.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      display: block;
-      width: 33px;
-      height: 21px;
-    }
   }
 
+}
+
+.lang-dialog {
+  flex: 1;
+
+  &__question {
+    mask: url('../img/mask-0.png');
+    mask-size: 100% 100%;
+    background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+    padding: 40px;
+    color: #ffffff;
+    font-family: 'A _ Duckymanly . Alen . Rus';
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2.4px;
+    margin-bottom: 20px;
+  }
+
+  &__answer {
+    color: #000066;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 40px;
+    margin-bottom: 15px;
+    margin-left: 100px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      mask: url('../img/border-1.png');
+      mask-size: 100% 100%;
+      background: #c6c6e9;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &:hover {
+      &:before {
+        background: #000066;
+      }
+    }
+  }
 }
