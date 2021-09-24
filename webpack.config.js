@@ -69,18 +69,19 @@ const config = {
             },
             {
                 test: /\.(|png|jpg)$/i,
-                use: [
-                    {
-                        loader: `img-optimize-loader`,
-                        options: {
-                            compress: {
-                                // This will transform your png/jpg into webp.
-                                webp: true,
-                                disableOnDevelopment: true,
-                            },
-                        },
-                    },
-                ],
+                type: "asset",
+                // use: [
+                //     {
+                //         loader: `img-optimize-loader`,
+                //         options: {
+                //             compress: {
+                //                 // This will transform your png/jpg into webp.
+                //                 webp: true,
+                //                 disableOnDevelopment: true,
+                //             },
+                //         },
+                //     },
+                // ],
             },
             {
                 test: /\.pug$/,
