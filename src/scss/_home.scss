@@ -243,6 +243,9 @@
   &__selects {
     gap: 15px;
     flex: 1;
+    img {
+
+    }
   }
 
   &__input {
@@ -322,7 +325,7 @@
     background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
     padding: 40px;
     color: #ffffff;
-    font-family: 'A _ Duckymanly . Alen . Rus';
+    font-family: 'A _ Duckymanly . Alen . Rus', serif;
     font-size: 24px;
     font-weight: 400;
     text-align: center;
