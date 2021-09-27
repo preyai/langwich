@@ -95,7 +95,9 @@ img {
   }
 
   &-25 {
-    flex-basis: 25%;
+    //flex-basis: 25%;
+    flex: .25;
+    width: 25%;
   }
 }
 
