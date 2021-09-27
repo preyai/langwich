@@ -4,14 +4,14 @@
   background-image: url('../img/slide-1.png');
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: contain;
+  background-size: auto 80%;
   min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   &__content {
-    max-width: 700px;
+    max-width: 60%;
 
   }
 
@@ -28,6 +28,11 @@
     font-weight: 400;
     letter-spacing: 0.42px;
     margin: 30px 0;
+    line-height: 1.7;
+  }
+
+  @media (max-width: $bp-2) {
+    min-height: 400px;
   }
 }
 
@@ -225,8 +230,12 @@
     }
   }
 
-  @media (max-width: 1300px) {
+
+  @media (max-width: $bp-2) {
     padding: 10px;
+    .btn {
+      padding: 15px 20px;
+    }
   }
 }
 

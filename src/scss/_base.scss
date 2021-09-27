@@ -52,6 +52,9 @@ p {
   &-blue {
     background-color: #f3f3fc
   }
+  &-lblue{
+    background-color: #f5f5fe;
+  }
 }
 
 img {
@@ -64,10 +67,10 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  @media (max-width: 1600px) {
+  @media (max-width: $bp-1) {
     max-width: 1230px;
   }
-  @media (max-width: 1300px) {
+  @media (max-width: $bp-2) {
     max-width: 1180px;
     padding-left: 40px;
     padding-right: 40px;
