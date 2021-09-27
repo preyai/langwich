@@ -1,7 +1,9 @@
 extends ./layouts/main
-
+block vars
+    - const title = "О клубе"
 block content
-    include ./includes/breadcrumbs
+    include ./components/mixins
+    +breadcrumbs(title)
     .container.mb-2
         h1 О клубе
         p.text-center.text-narrow.mb-2
