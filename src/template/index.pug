@@ -164,19 +164,21 @@ block content
     .container.mb-4
         h2 Я кое-что затеял...
         p.text-center Хотите узнать что именно? Загляните в мой ЛэнгТоп!
-        .d-flex.align-items-center.mb-2.bgr-lblue
-            div
-                img(src=require('../img/lang-0.png'))
-            .lang-dialog
-                .lang-dialog__question
-                    | Hi there, do you like quiz?
-                    br
-                    | Recently i prepared one for you!
-                    br
-                    | Try your skills!
-                .lang-dialog__answer Let`s go!
-                .lang-dialog__answer Воу, воу, воу! Полегче, расскажи что ты задумал?
-        .d-flex.flex-center.w-100
-            button.btn.btn-4 Продолжить
+        .lang-dialog
+            .d-flex.align-items-center
+                div
+                    img(src=require('../img/lang-0.png'))
+                .lang-dialog__wrap
+                    .lang-dialog__question
+                        .lang-dialog__question_wrap
+                            | Hi there, do you like quiz?
+                            br
+                            | Recently i prepared one for you!
+                            br
+                            | Try your skills!
+                    .lang-dialog__answer Let`s go!
+                    .lang-dialog__answer Воу, воу, воу! Полегче, расскажи что ты задумал?
+            .d-flex.flex-center.w-100
+                button.btn.btn-4 Продолжить
     .container.mb-2
         include ./includes/questform

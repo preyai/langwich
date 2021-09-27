@@ -331,20 +331,41 @@
 }
 
 .lang-dialog {
-  flex: 1;
+  background-color: #f5f5fe;
+  padding: 60px;
+  border-radius: 20px;
+  padding-bottom: 30px;
+  &__wrap {
+    flex: 1;
 
+  }
   &__question {
-    mask: url('../img/mask-0.png');
-    mask-size: 100% 100%;
-    background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
-    padding: 40px;
-    color: #ffffff;
-    font-family: 'A _ Duckymanly . Alen . Rus', serif;
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-    letter-spacing: 2.4px;
+    display: flex;
     margin-bottom: 20px;
+    &_wrap {
+      mask: url('../img/mask-0.png');
+      mask-size: 100% 100%;
+      background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+      padding: 30px;
+      color: #ffffff;
+      font-family: 'A _ Duckymanly . Alen . Rus', serif;
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+      letter-spacing: 2.4px;
+      flex: 1;
+      //margin-left: 100px;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 100px;
+      min-height: 100%;
+      mask: url('../img/mask-1.png');
+      mask-repeat: no-repeat;
+      mask-position: right bottom;
+      background: #26267d;
+    }
   }
 
   &__answer {
@@ -373,5 +394,8 @@
         background: #000066;
       }
     }
+  }
+  .btn {
+    transform: translateY(60px);
   }
 }
