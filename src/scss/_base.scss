@@ -1,4 +1,5 @@
 @import 'variables';
+
 body {
   margin: 0;
   font-family: "Acrom", serif;
@@ -38,11 +39,18 @@ p {
     margin: auto;
   }
 }
-.w {&-100 {width: 100%}}
+
+.w {
+  &-100 {
+    width: 100%
+  }
+}
+
 .mb {
   &-2 {
     margin-bottom: 40px;
   }
+
   &-4 {
     margin-bottom: 80px;
   }
@@ -52,7 +60,8 @@ p {
   &-blue {
     background-color: #f3f3fc
   }
-  &-lblue{
+
+  &-lblue {
     background-color: #f5f5fe;
   }
 }
@@ -87,12 +96,15 @@ img {
   &-between {
     justify-content: space-between;
   }
+
   &-center {
     justify-content: center;
   }
+
   &-column {
     flex-direction: column;
   }
+
   &-1 {
     flex: 1;
   }
@@ -164,17 +176,19 @@ img {
     font-weight: 700;
     text-transform: uppercase;
   }
+
   &-4 {
     mask: url('../img/btn-mask.png');
     mask-size: 100% 100%;
     background-color: #e6e6f9;
     color: #000066;
-    padding:  25px 40px;
+    padding: 25px 40px;
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.75px;
     text-decoration: underline dotted;
   }
+
   &_arrow {
     display: flex;
     align-items: center;
@@ -195,33 +209,40 @@ img {
 
 .header-notification {
   background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+
   .d-flex {
     padding-top: 20px;
     padding-bottom: 20px;
     gap: 25px;
   }
-  &__text{
+
+  &__text {
     color: #ffffff;
     font-size: 17px;
     font-weight: 400;
     letter-spacing: 0.85px;
+
     strong {
       color: #ff0000;
     }
   }
-  &__link{
+
+  &__link {
     color: #ffffff;
     font-size: 17px;
     letter-spacing: 0.85px;
     text-decoration: underline dashed;
     text-underline-offset: 5px;
+
     &:hover {
       text-decoration-color: #5d5df6;
     }
   }
-  &__close{
+
+  &__close {
     cursor: pointer;
     margin-left: auto;
+
     &:before {
       content: url('../img/ico-close.svg');
     }
@@ -234,14 +255,18 @@ img {
   background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
   padding: 40px;
   color: #fff;
+  margin-right: 60px;
   &__row {
     gap: 40px;
   }
+
   &__input {
     flex: 1;
+
     label {
       display: flex;
       flex-direction: column-reverse;
+
       span {
         color: #9494e4;
         font-size: 12px;
@@ -249,6 +274,7 @@ img {
         letter-spacing: 0.6px;
         opacity: 0;
       }
+
       input {
         color: #ffffff;
         font-size: 15px;
@@ -261,18 +287,22 @@ img {
         border-left: unset;
         border-right: unset;
         border-bottom: solid 1px #5858d9;
+
         &::placeholder {
           color: #ffffff;
         }
+
         &:focus {
           border-color: #ffffff;
-          +span {
+
+          + span {
             opacity: 1;
           }
         }
       }
     }
   }
+
   h3 {
     color: #ffffff;
     font-size: 24px;
@@ -280,3 +310,16 @@ img {
   }
 }
 
+.splide {
+  &__pagination {
+    &__page {
+      width: 13px;
+      height: 13px;
+      background-color: #9393c3;
+      &.is-active {
+
+        background-color: #000066;
+      }
+    }
+  }
+}
