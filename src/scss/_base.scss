@@ -11,9 +11,17 @@ body {
   text-underline-offset: 5px;
 }
 
-h2 {
+h1,
+.h1 {
   color: #000066;
   font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+}
+
+h2 {
+  color: #000066;
+  font-size: 36px;
   font-weight: 900;
   text-align: center;
 }
@@ -37,6 +45,31 @@ p {
   &-narrow {
     max-width: 900px;
     margin: auto;
+  }
+}
+
+.img {
+  &-bordered {
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    img {
+      position: relative;
+      border-radius: 20px;
+      display: block;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      border: 2px solid #babad3;
+      border-radius: 20px;
+      top: 20px;
+      bottom: -20px;
+      left: 20px;
+      right: -20px;
+    }
   }
 }
 
@@ -92,6 +125,17 @@ img {
   }
 }
 
+.reverse {
+  > .d-flex {
+    flex-direction: row-reverse;
+  }
+
+  .advant-img {
+    padding-left: 20px;
+    padding-right: unset;
+  }
+}
+
 .flex {
   &-between {
     justify-content: space-between;
@@ -113,6 +157,14 @@ img {
     //flex-basis: 25%;
     flex: .25;
     width: 25%;
+  }
+}
+
+.gap {
+  @for $i from 1 through 6 {
+    &-#{$i} {
+      gap: calc(#{$i}px * 10);
+    }
   }
 }
 
@@ -198,8 +250,29 @@ img {
     font-size: 15px;
     font-weight: 800;
     text-decoration: underline dashed;
-    img {
 
+    .ico {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        bottom: -20px;
+        left: -20px;
+        right: -20px;
+        border: 1px solid transparentize(#e6e6f6, .7);
+        border-radius: 50%;
+        z-index: -1;
+      }
+    }
+
+    &:hover {
+      .ico {
+        &:before {
+          border-color: #e6e6f6;
+        }
+      }
     }
   }
 
@@ -270,6 +343,7 @@ img {
   padding: 40px;
   color: #fff;
   margin-right: 60px;
+
   &__row {
     gap: 40px;
   }
@@ -334,10 +408,32 @@ img {
       transform: unset !important;
       opacity: 1 !important;
       transition: .3s;
+
       &.is-active {
         width: 69px;
         background-color: #000066;
       }
     }
   }
+}
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    font-size: 13px;
+    font-weight: 400;
+    color: #9393c3;
+
+    &:is(a) {
+      color: #000066;
+    }
+  }
+}
+
+.advant-img {
+  text-align: center;
+  padding-right: 20px;
 }

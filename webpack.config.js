@@ -5,10 +5,32 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const autoprefixer = require('autoprefixer');
+const fs = require('fs')
 
-const isProduction = process.env.NODE_ENV == "production";
+// Our function that generates our html plugins
+function generateHtmlPlugins(templateDir) {
+    // Read files in template directory
+    const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir), {withFileTypes: true})
+    return templateFiles.filter(item => item.isFile()).map(item => {
+        // Split names and extension
+        const parts = item.name.split('.')
+        const name = parts[0]
+        const extension = parts[1]
+        // Create new HTMLWebpackPlugin with option
+        return new HtmlWebpackPlugin({
+            filename: `${name}.html`,
+            template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
+        })
+    })
+}
 
-const stylesHandler = !isProduction ? "style-loader" : MiniCssExtractPlugin.loader ;
+// Call our function on our views directory.
+const htmlPlugins = generateHtmlPlugins('./src/template')
+console.log(htmlPlugins)
+
+const isProduction = process.env.NODE_ENV === "production";
+
+const stylesHandler = !isProduction ? "style-loader" : MiniCssExtractPlugin.loader;
 
 const config = {
     entry: "./src/index.js",
@@ -19,17 +41,13 @@ const config = {
         open: true,
         host: "localhost",
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: "src/template/index.pug",
-            filename: "index.html",
-            inject: true
-        }),
+    plugins: htmlPlugins.concat([
+
         new HtmlWebpackPugPlugin(),
         new MiniCssExtractPlugin(),
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
-    ],
+    ]),
     module: {
         rules: [
             {

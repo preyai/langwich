@@ -1,0 +1,20 @@
+extends ./layouts/main
+
+block content
+    include ./includes/breadcrumbs
+    .container.mb-2
+        h1 О клубе
+        p.text-center.text-narrow.mb-2
+            | «Langwich» — онлайн-клуб английского языка, объединяющий людей со всего мира.
+            br
+            | Миссия Клуба — превратить процесс изучения нового языка в приятное и интересное занятие, в ходе которого каждый может встретить единомышленников и обрести новых друзей.
+        .reverse
+            include ./includes/advantages
+        h2 Пример длинного подзаголовка h2 для сео-блока
+        .d-flex.gap-5.mb-2
+            .flex-1
+                .img-bordered
+                    img(src=require('../img/img-1.png') style={'max-width':'512px'})
+            .flex-1
+                p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+        include ./includes/questform

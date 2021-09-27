@@ -5,46 +5,15 @@ block content
         .container
             include ./includes/slider
     .container
-        h2 Why Langwich?
+        h2.h1 Why Langwich?
         p.text-center.text-narrow.mb-2 Не удивляйтесь – я тоже учился в школе.
             br
             | Отметки были хороши, но говорить по-английски без стеснения я научился в Клубе.
             br
             | Свобода! Вот что отличает обучение здесь. Вы вольны выбирать преподавателя, время, тему и продолжительность класса.
-        .d-flex
-            .flex-1(style='padding-right:20px')
-                img(src=require('../img/img-0.png'))
-            .flex-1
-                .d-flex.polygon-block
-                    .polygon-block__item
-                        .polygon-block__item_wrap
-                            img(src=require('../img/icowhy-1.png'))
-                            | Доступная цена
-                            br
-                            span от 450 рублей/класс
-                    .polygon-block__item
-                        .polygon-block__item_wrap
-                            img(src=require('../img/icowhy-2.png'))
-                            | Различный
-                            br
-                            span формат уроков –
-                            br
-                            | 25 или 50 минут
-                    .polygon-block__item
-                        .polygon-block__item_wrap
-                            img(src=require('../img/icowhy-3.png'))
-                            | Опора
-                            | на разговорный язык и
-                            br
-                            span приятная атмосфера
-                    .polygon-block__item
-                        .polygon-block__item_wrap
-                            img(src=require('../img/icowhy-4.png'))
-                            | Занятия в любое
-                            br
-                            span удобное время
+        include ./includes/advantages
     .container
-        h2 Спикеры – лидеры рейтинга:
+        h2.h1 Спикеры – лидеры рейтинга:
         p.text-center Спикеры со всего мира готовы пообщаться с Вами на любую тему!
         .d-flex.speakers
             .flex-25
@@ -117,7 +86,7 @@ block content
                 img(src=require('../img/temp-1.png'))
 
     .container
-        h2 Клуб, а
+        h2.h1 Клуб, а
             span(style={color: '#ff0000'})  не школа...
         p.text-center.text-narrow.mb-2
             | Общение со Спикером длится
@@ -158,11 +127,11 @@ block content
                     .polygon-block__number 4
 
     .container
-        h2 Классы по 25 и 50 минут с выгодой!
+        h2.h1 Классы по 25 и 50 минут с выгодой!
         p.text-center Выберите длительность и стоимость класса
         include ./includes/payform
     .container.mb-4
-        h2 Я кое-что затеял...
+        h2.h1 Я кое-что затеял...
         p.text-center Хотите узнать что именно? Загляните в мой ЛэнгТоп!
         .lang-dialog
             .d-flex.align-items-center
