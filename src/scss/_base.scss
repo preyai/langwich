@@ -43,6 +43,9 @@ p {
   &-2 {
     margin-bottom: 40px;
   }
+  &-4 {
+    margin-bottom: 80px;
+  }
 }
 
 .bgr {
@@ -65,7 +68,7 @@ img {
     max-width: 1230px;
   }
   @media (max-width: 1300px) {
-    max-width: 1130px;
+    max-width: 1180px;
     padding-left: 40px;
     padding-right: 40px;
   }

@@ -119,7 +119,7 @@ block content
     .container
         h2 Клуб, а
             span(style={color: '#ff0000'})  не школа...
-        p.text-center.text-narrow
+        p.text-center.text-narrow.mb-2
             | Общение со Спикером длится
             strong  25
             |  или
@@ -164,8 +164,9 @@ block content
     .container
         h2 Я кое-что затеял...
         p.text-center Хотите узнать что именно? Загляните в мой ЛэнгТоп!
-        .d-flex
-            img(src=require('../img/lang-0.png'))
+        .d-flex.align-items-center
+            div
+                img(src=require('../img/lang-0.png'))
             .lang-dialog
                 .lang-dialog__question
                     | Hi there, do you like quiz?
