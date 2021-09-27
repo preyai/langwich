@@ -164,6 +164,7 @@ img {
     &:hover {
       background-color: #ffffff;
     }
+
   }
 
   &-3 {
@@ -187,6 +188,19 @@ img {
     font-weight: 700;
     letter-spacing: 0.75px;
     text-decoration: underline dotted;
+  }
+
+  &-play {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000066;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: underline dashed;
+    img {
+
+    }
   }
 
   &_arrow {

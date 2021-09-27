@@ -15,7 +15,9 @@
 
   &__content {
     max-width: 60%;
-
+    .d-flex {
+      gap: 30px;
+    }
   }
 
   &__title {
