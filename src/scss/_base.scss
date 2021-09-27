@@ -316,8 +316,12 @@ img {
       width: 13px;
       height: 13px;
       background-color: #9393c3;
+      border-radius: 7px;
+      transform: unset;
+      opacity: 1;
+      transition: .3s;
       &.is-active {
-
+        width: 69px;
         background-color: #000066;
       }
     }
