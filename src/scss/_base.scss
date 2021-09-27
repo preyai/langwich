@@ -23,7 +23,6 @@ h2 {
   color: #000066;
   font-size: 36px;
   font-weight: 900;
-  text-align: center;
 }
 
 p {
@@ -46,8 +45,17 @@ p {
     max-width: 900px;
     margin: auto;
   }
+  &-bgr {
+    background-color: #f3f3fc;
+    padding: 25px;
+    border-radius: 15px;
+  }
 }
-
+ ul {
+   li::marker {
+     content: " - ";
+   }
+ }
 .img {
   &-bordered {
     position: relative;
