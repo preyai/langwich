@@ -1,0 +1,21 @@
+extends ./layouts/main
+block vars
+    -
+        const title = "Info"
+        const news = [
+            {title:"Пример заголовка статьи"},
+            {title:"Пример заголовка статьи"},
+            {title:"Пример заголовка статьи"},
+            {title:"Пример заголовка статьи"},
+            {title:"Пример заголовка статьи"},
+            {title:"Пример заголовка статьи"},
+            {title:"Пример заголовка статьи"},
+        ]
+block content
+    include ./components/mixins
+    +breadcrumbs(title)
+    .container.mb-2
+        h1 Info-club: Полезные статьи
+        each item in news 
+            include ./includes/newsCard
+        
