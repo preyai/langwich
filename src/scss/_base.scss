@@ -1,9 +1,8 @@
-@import 'variables';
+@import "variables";
 
 body {
   margin: 0;
   font-family: "Acrom", serif;
-
 }
 
 * {
@@ -51,11 +50,11 @@ p {
     border-radius: 15px;
   }
 }
- ul {
-   li::marker {
-     content: " - ";
-   }
- }
+ul {
+  li::marker {
+    content: " - ";
+  }
+}
 .img {
   &-bordered {
     position: relative;
@@ -83,7 +82,7 @@ p {
 
 .w {
   &-100 {
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -99,7 +98,7 @@ p {
 
 .bgr {
   &-blue {
-    background-color: #f3f3fc
+    background-color: #f3f3fc;
   }
 
   &-lblue {
@@ -163,7 +162,7 @@ img {
 
   &-25 {
     //flex-basis: 25%;
-    flex: .25;
+    flex: 0.25;
     width: 25%;
   }
 }
@@ -208,7 +207,7 @@ img {
     background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
     border-radius: 15px;
     padding: 20px 40px;
-    border-bottom: solid 6px transparentize(#ffffff, .8);
+    border-bottom: solid 6px transparentize(#ffffff, 0.8);
   }
 
   &-2 {
@@ -224,7 +223,6 @@ img {
     &:hover {
       background-color: #ffffff;
     }
-
   }
 
   &-3 {
@@ -239,7 +237,7 @@ img {
   }
 
   &-4 {
-    mask: url('../img/btn-mask.png');
+    mask: url("../img/btn-mask.png");
     mask-size: 100% 100%;
     background-color: #e6e6f9;
     color: #000066;
@@ -269,7 +267,7 @@ img {
         bottom: -20px;
         left: -20px;
         right: -20px;
-        border: 1px solid transparentize(#e6e6f6, .7);
+        border: 1px solid transparentize(#e6e6f6, 0.7);
         border-radius: 50%;
         z-index: -1;
       }
@@ -291,7 +289,7 @@ img {
 
     &:after {
       content: "";
-      background-image: url('../img/pay-arrow.png');
+      background-image: url("../img/pay-arrow.png");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -339,14 +337,14 @@ img {
     margin-left: auto;
 
     &:before {
-      content: url('../img/ico-close.svg');
+      content: url("../img/ico-close.svg");
     }
   }
 }
 
 .quest-form {
   flex: 1;
-  clip-path: $polygon;
+  clip-path: $poligon;
   background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
   padding: 40px;
   color: #fff;
@@ -415,7 +413,7 @@ img {
       border-radius: 7px;
       transform: unset !important;
       opacity: 1 !important;
-      transition: .3s;
+      transition: 0.3s;
 
       &.is-active {
         width: 69px;
@@ -446,7 +444,36 @@ img {
   padding-right: 20px;
 }
 
-.polygon-2 {
-  clip-path: $polygon2;
-  background-color: #f3f3fc;
+.news-card {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: solid 3px #f3f3fc;
+  &__img {
+  }
+  &__info {
+    flex: 1;
+    font-size: 13px;
+  }
+  &__title {
+    color: #000066;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  &__date {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.33px;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+    border-radius: 20px;
+  }
+  .btn {
+    display: inline-block;
+  }
 }
