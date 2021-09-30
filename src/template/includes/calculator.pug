@@ -22,7 +22,7 @@
 
 .calculator
     - select = 0
-    .coins.d-flex.align-items-center.gap-3.mb-2
+    .coins.d-flex.align-items-center.gap-3.mb-4
         each item in coins
             .calculator__coin(class=coins.indexOf(item) === select ? "active" : "")
                 .calculator__coin_wrap
@@ -31,7 +31,7 @@
                     div=item.time
                         sup мин
 
-    .calculator__price.mb-2
+    .calculator__price.mb-4
         .coin
             img(src=coins[select].ico)
             .coin__count x1
@@ -42,13 +42,13 @@
             sup руб
         .btn.btn-1 купить 1 #{coins[select].title} лэнг-коин
 
-    .d-flex.mb-2
+    .d-flex.mb-4
         each item in count
             .calculator__count
                 .coin
                     img(src=coins[select].ico)
                     .coin__count x#{item.value}
-                .d-flex.mb-2
+                .d-flex.mb-4
                     div
                         .big=item.value
                         div классов
@@ -61,10 +61,21 @@
                             sup руб.
                             |  за 1 класс
                 .btn.btn-1 купить #{item.value} классов
-    .calculator__summ
+    .calculator__summ.mb-4
         .coin
             img(src=coins[select].ico)
             .coin__count ...
+        div Укажите количество полных классов, которое Вы бы хотели приобрести:
+        input(size=2)
+        .delimiter
+        div
+            .big 31050
+                sup руб
+            .green=coins[select].price
+                sup руб.
+                |  за 1 класс
+        .btn.btn-1 купить
+    p.mb-4 Итоговая стоимость может незначительно отличаться в зависимости от способа оплаты. Чтобы увидеть итоговую стоимость, нажмите на кнопку выбранного способа оплаты. Более подробную информацию вы найдёте в Юридических документах (или Условиях использования Платформы).
 
 script.
     const coins = !{JSON.stringify(coins).replace(/<\//g, "<\\/")};

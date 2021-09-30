@@ -51,12 +51,12 @@
     flex-basis: calc(50% - 15px);
     padding: 2px;
     // background: #dedeed;
-    // clip-path: $poligon;
+    // clip-path: $polygon;
     filter: drop-shadow(0 0 1px #dedeed);
 
     &_wrap {
       position: relative;
-      clip-path: $poligon;
+      clip-path: $polygon;
       background-color: #fff;
       height: 100%;
       text-align: center;
@@ -131,7 +131,7 @@
     padding: 100px 20px 20px;
     margin: 0 auto;
     background-color: #f3f3fc;
-    clip-path: $poligon;
+    clip-path: $polygon;
     text-align: center;
     color: #5c5c89;
     font-size: 12px;
@@ -253,7 +253,7 @@
   }
 
   &__wrap {
-    clip-path: $poligon;
+    clip-path: $polygon;
     background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
     padding: 50px;
     position: relative;

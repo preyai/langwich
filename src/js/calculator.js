@@ -1,1 +1,1 @@
-select = 0
+console.log(coins)

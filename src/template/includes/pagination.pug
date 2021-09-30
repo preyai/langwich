@@ -1,0 +1,9 @@
+.pagination.mb-4
+    .pagination__more Показать еще
+    .d-flex.flex-between.align-items-center.pt-2
+        .pagination__arrow.pagination__arrow_left
+        .pagination__list
+            - let n = 1;
+                while n < 9
+                    .pagination__item=n++
+        .pagination__arrow.pagination__arrow_right

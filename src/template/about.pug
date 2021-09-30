@@ -4,16 +4,16 @@ block vars
 block content
     include ./components/mixins
     +breadcrumbs(title)
-    .container.mb-2
+    .container.mb-4
         h1 О клубе
-        p.text-center.text-narrow.mb-2
+        p.text-center.text-narrow.mb-4
             | «Langwich» — онлайн-клуб английского языка, объединяющий людей со всего мира.
             br
             | Миссия Клуба — превратить процесс изучения нового языка в приятное и интересное занятие, в ходе которого каждый может встретить единомышленников и обрести новых друзей.
         .reverse
             include ./includes/advantages
         h2.text-center Пример длинного подзаголовка h2 для сео-блока
-        .d-flex.gap-5.mb-2
+        .d-flex.gap-5.mb-4
             .flex-1
                 .img-bordered
                     img(src=require('../img/img-1.png') style={'max-width':'512px'})

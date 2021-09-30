@@ -1,0 +1,40 @@
+extends ./layouts/main
+include ./components/mixins
+block vars
+    -
+        const title = 'Cпикеры'
+block content
+    +breadcrumbs(title)
+    .container
+        h1 Cпикеры
+        p.text-center.text-narrow.mb-8 Здесь представлены анкеты всех Спикеров Клуба. Вы можете выбрать любого из них, используя фильтры слева. Пожалуйста, не забудьте указать правильный часовой пояс, в котором Вы находитесь, чтобы расписание Спикеров отображалось корректно.
+        .speakers
+            .speakers__sidebar
+                .speakers__serch
+                    img(src=require('../img/ico-serch.png'))
+                    input(placeholder='Поиск')
+                h3 Фильтры:
+                .speakers__filter
+                    img(src=require('../img/ico-setting.png'))
+                    .flex-1
+                        .speakers__filter_title Знание языков
+                        .speakers__filter_value любые
+                .speakers__filter
+                    img(src=require('../img/ico-setting.png'))
+                    .flex-1
+                        .speakers__filter_title Проводит кл. для:
+                        .speakers__filter_value выбрано: 3
+                .speakers__filter
+                    img(src=require('../img/ico-setting.png'))
+                    .flex-1
+                        .speakers__filter_title Национальность
+                        .speakers__filter_value русская
+                img(src=require('../img/lang-3.png'))
+
+            .speakers__list
+                - let n = 0;
+                while n < 9
+                    .flex-33
+                        include ./includes/speakerСard
+                        - n++
+                include ./includes/pagination
