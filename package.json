@@ -8,7 +8,9 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "push": "scp -r public_html root@176.10.97.122:/home/admin/web/langwich.preycreate.xyz/",
+    "publish": "npm run build && npm run push"
   },
   "author": "",
   "license": "ISC",

@@ -346,7 +346,7 @@ img {
 
 .quest-form {
   flex: 1;
-  clip-path: $poligon;
+  clip-path: $polygon;
   background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
   padding: 40px;
   color: #fff;
@@ -444,4 +444,9 @@ img {
 .advant-img {
   text-align: center;
   padding-right: 20px;
+}
+
+.polygon-2 {
+  clip-path: $polygon2;
+  background-color: #f3f3fc;
 }

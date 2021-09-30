@@ -30,12 +30,14 @@ console.log(htmlPlugins)
 
 const isProduction = process.env.NODE_ENV === "production";
 
+const productionFolder = isProduction ? "public_html" : "dist";
+
 const stylesHandler = !isProduction ? "style-loader" : MiniCssExtractPlugin.loader;
 
 const config = {
     entry: "./src/index.js",
     output: {
-        path: path.resolve(__dirname, isProduction ? "docs" : "dist"),
+        path: path.resolve(__dirname, productionFolder),
     },
     devServer: {
         open: true,
