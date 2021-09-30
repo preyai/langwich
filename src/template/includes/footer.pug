@@ -1,4 +1,14 @@
-- var menu = ['Новости','Статьи', 'Квизы','Тестирование','Отзывы','Родителям','Спикерам', 'Правила и условия']
+-
+    var menu = [
+    {title:'Новости',url:'/blog.html'},
+    {title:'Статьи', url:''},
+    {title:'Квизы',url:''},
+    {title:'Тестирование',url:''},
+    {title:'Отзывы',url:''},
+    {title:'Родителям',url:'/forspeakers.html'},
+    {title:'Спикерам', url:''},
+    {title:'Правила и условия',url:''}
+    ]
 - var socials = [require('../../img/ico-inst.png'),require('../../img/ico-twit.png'),require('../../img/ico-vk.png'),require('../../img/ico-facebook.png'),require('../../img/ico-youtube.png')]
 - var payments = [require('../../img/pay-ali.png'),require('../../img/pay-visa.png'),require('../../img/pay-paypal.png'),require('../../img/pay-mc.png')]
 footer
@@ -40,7 +50,7 @@ footer
         .gradient
             nav.footer-menu
                 each item in menu
-                    a.footer-menu__item(href='#')=item
+                    a.footer-menu__item(href=item.url)=item.title
             .gr-line
                 div © 2021, «Лэнгвич». Все права защищены.
                 a Политика конфиденциальности

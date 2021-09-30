@@ -1,13 +1,20 @@
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
-import './scss/styles.scss';
-import Splide from '@splidejs/splide';
+import '@splidejs/splide/dist/css/themes/splide-default.min.css'
+import './scss/styles.scss'
+import Splide from '@splidejs/splide'
 
-
-new Splide( '#banners', {
-    arrows: false,
-} ).mount();
+if (document.querySelector('#banners')) {
+    new Splide('#banners', {
+        arrows: false,
+    }).mount()
+}
 
 document.querySelector('.header-notification__close').onclick = function () {
     // alert(this.dataset.parent)
-    document.querySelector('#' + this.dataset.parent).remove();
+    document.querySelector('#' + this.dataset.parent).remove()
+}
+
+for (let faq of document.querySelectorAll('.faq')) {
+    faq.onclick = function () {
+        this.classList.toggle('active')
+    }
 }

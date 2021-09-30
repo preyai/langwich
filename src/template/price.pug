@@ -1,0 +1,19 @@
+extends ./layouts/main
+include ./components/mixins
+block vars
+    -
+        const title = 'Стоимость'
+block content
+    +breadcrumbs(title)
+    .container
+        h1.text-left Стоимость
+        .lang-info.mb-2
+            .polygon-3.bgr-blue.lang-info__text
+                div
+                    p
+                        strong Учтите, моненты:
+                    p а) На текущий момент, не обмениваются!
+                    p б) Не подлежат возрату и выводу в денежном эквиваленте, за исключением некоторых случаев, описанных в правилах!
+            .lang-info__img
+                img(src=require('../img/lang-1.png'))
+        include ./includes/calculator

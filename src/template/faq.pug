@@ -1,0 +1,57 @@
+extends ./layouts/main
+block vars
+    -
+        const title = "FAQ"
+        const items = [
+                {
+                    quest:'Что такое «Langwich»?',
+                    answer:'Лэнг – это Ваш друг таинственного происхождения, который отвечает за создание атмосферы Клуба. Он поможет Вам обрести новый язык, подсказывая и сопровождая.',
+                },
+                {
+                    quest:'Почему такое название?',
+                    answer:'Лэнг – это Ваш друг таинственного происхождения, который отвечает за создание атмосферы Клуба. Он поможет Вам обрести новый язык, подсказывая и сопровождая.',
+                },
+                {
+                    quest:'Кто такой Лэнг?',
+                    answer:'Лэнг – это Ваш друг таинственного происхождения, который отвечает за создание атмосферы Клуба. Он поможет Вам обрести новый язык, подсказывая и сопровождая.',
+                },
+                {
+                    quest:'',
+                    answer:'',
+                },
+                {
+                    quest:'',
+                    answer:'',
+                },
+                {
+                    quest:'',
+                    answer:'',
+                },
+        ]
+block content
+    include ./components/mixins
+    +breadcrumbs(title)
+    .container.mb-2
+        h1 FAQ 
+        .lang-info.mb-2
+            .polygon-3.bgr-blue.lang-info__text
+                div 
+                    | Ознакомьтесь с ответами на самые популярные вопросы Клиентов и посетителей Клуба.
+                    br
+                    | Если не найдёте нужной информации, напишите мне лично!
+            .lang-info__img 
+                img(src=require('../img/lang-1.png'))
+
+        .quests 
+            - let n = 0
+            each item in items
+                - n++
+                .faq
+                    .faq__wrap
+                        .faq__polygon
+                            .faq__number=n
+                            .faq__quest=item.quest
+                    .faq__answer=item.answer
+
+
+        

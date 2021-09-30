@@ -26,7 +26,6 @@ function generateHtmlPlugins(templateDir) {
 
 // Call our function on our views directory.
 const htmlPlugins = generateHtmlPlugins('./src/template')
-console.log(htmlPlugins)
 
 const isProduction = process.env.NODE_ENV === "production";
 

@@ -53,6 +53,7 @@
     // background: #dedeed;
     // clip-path: $poligon;
     filter: drop-shadow(0 0 1px #dedeed);
+    transition: .3s;
 
     &_wrap {
       position: relative;
