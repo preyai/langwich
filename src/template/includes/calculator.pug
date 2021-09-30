@@ -1,0 +1,74 @@
+-
+    const coins = [
+        {
+            title: 'серебряный',
+            ico: require('../../img/cl-1.png'),
+            time: '25',
+            price: 500
+        },
+        {
+            title: 'золотой',
+            ico: require('../../img/cl-2.png'),
+            time: '50',
+            price: 790
+        }
+    ]
+    const count = [
+        {value: 5},
+        {value: 10},
+        {value: 20}
+    ]
+    let select = 1
+
+.calculator
+    - select = 0
+    .coins.d-flex.align-items-center.gap-3.mb-2
+        each item in coins
+            .calculator__coin(class=coins.indexOf(item) === select ? "active" : "")
+                .calculator__coin_wrap
+                    img(src=item.ico)
+                    div Класс:
+                    div=item.time
+                        sup мин
+
+    .calculator__price.mb-2
+        .coin
+            img(src=coins[select].ico)
+            .coin__count x1
+        div=coins[select].time
+            sup мин
+        .delimiter
+        div=coins[select].price
+            sup руб
+        .btn.btn-1 купить 1 #{coins[select].title} лэнг-коин
+
+    .d-flex.mb-2
+        each item in count
+            .calculator__count
+                .coin
+                    img(src=coins[select].ico)
+                    .coin__count x#{item.value}
+                .d-flex.mb-2
+                    div
+                        .big=item.value
+                        div классов
+                            br
+                            span (по #{coins[select].time} мин.)
+                    div
+                        .big=coins[select].price * item.value
+                            sup руб
+                        .green=coins[select].price
+                            sup руб.
+                            |  за 1 класс
+                .btn.btn-1 купить #{item.value} классов
+    .calculator__summ
+        .coin
+            img(src=coins[select].ico)
+            .coin__count ...
+
+script.
+    const coins = !{JSON.stringify(coins).replace(/<\//g, "<\\/")};
+    const count = !{JSON.stringify(count).replace(/<\//g, "<\\/")};
+    let select = !{select}
+script
+    include ../../js/calculator.js
