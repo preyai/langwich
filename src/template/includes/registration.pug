@@ -1,8 +1,8 @@
 extends ../layouts/popup
 block var
     -
-        var h2 = 'войти'
-        var id = 'loginForm'
+        var h2 = 'регистрация'
+        var id = 'registrationForm'
 block content
     .login-form
         .login-form__input
@@ -11,8 +11,8 @@ block content
         .login-form__input
             img(src=require('../img/input-password.png'))
             input(placeholder='Ваш пароль')
-        .text-center.m-1 Войти с помощью соц. сетей:
-        .socials
+        .text-center.m-1 Регистрация с помощью соц. сетей:
+        .socials.mb-1
             .socials__list
                 a.socials__item
                     img(src=require('../img/ico-twit.png'))
@@ -20,5 +20,5 @@ block content
                     img(src=require('../img/ico-vk.png'))
                 a.socials__item
                     img(src=require('../img/ico-facebook.png'))
-        .text-center.m-1 Забыли пароль?
-        .btn.btn-1 Войти
+        .btn.btn-1 зарегистрироваться
+        .text-center.m-1(style={'font-size':'70%'}) Нажимая кнопку “Зарегистрироваться” Вы соглашаеться на персональную обработку данных и принимаете Условия пользовательского соглашения.

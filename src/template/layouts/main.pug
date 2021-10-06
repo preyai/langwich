@@ -6,8 +6,12 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title=title
-    body 
-        include ../includes/header
+    body
+        if login
+            include ../includes/headerNoLogin
+        else
+            include ../includes/header
         block content
         include ../includes/footer
         include ../includes/login
+        include ../includes/registration

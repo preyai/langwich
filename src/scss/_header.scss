@@ -76,8 +76,11 @@ header {
 }
 
 .person-header {
+  margin-left: auto;
   gap: 40px;
 }
+
+
 
 .header {
   &-first {
@@ -119,15 +122,16 @@ header {
 
 .header-info {
   @extend .align-items-center;
-  justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
+  gap: 20px;
 }
 
 .lang {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-right: 40px;
 
   &__flag {
     width: 38px;
@@ -182,6 +186,7 @@ header {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-left: auto;
 
   &__avatar {
     width: 40px;
@@ -201,8 +206,24 @@ header {
     letter-spacing: 0.7px;
   }
 
-  &:after {
-    content: url('../img/arrow-1.svg');
+  &:not(.no-login) {
+    &:after {
+      content: url('../img/arrow-1.svg');
+    }
+  }
+
+
+  button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000066;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    cursor: pointer;
   }
 }
 

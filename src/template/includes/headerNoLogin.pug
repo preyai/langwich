@@ -1,0 +1,58 @@
+-
+    const sections = [
+        {title: "Уведомления", icon: require('../../img/menu-notice.png')}, {
+            title: "Классы",
+            icon: require('../../img/menu-calendar.png')
+        }, {title: "Клиенты", icon: require('../../img/menu-client.png')}, {
+            title: "Расписание",
+            icon: require('../../img/menu-timetable.png')
+        }, {title: "Рейтинг", icon: require('../../img/menu-rate.png')}, {
+            title: "Бонусы и акции",
+            icon: require('../../img/menu-action.png')
+        }, {title: "Вывод средств", icon: require('../../img/menu-purse.png')}]
+    const menu = [
+        {title: 'Спикеры', url: '/speakers.html'},
+        {title: 'Стоимость', url: '/price.html'},
+        {title: 'ЛэнгТоп', url: '/langtop.html'},
+        {title: 'FAQ', url: 'faq.html'},
+        {title: 'О клубе', url: '/about.html'}
+    ]
+include ./notification
+header
+    .header-first
+        .container
+            .d-flex.flex-between.align-items-center
+                nav.sections
+                    each item in sections
+                        a.sections__item(href="#")
+                            img.sections__icon(src=item.icon, alt="")
+                            .sections__title=item.title
+                .d-flex.person-header
+
+    .container
+        .d-flex.header-second
+            a.logo(href='/')
+                img.logo__image(src=require('../../img/logo.png') alt='logo')
+                .logo__text
+                    div Клуб
+                    div
+                        span английского
+                        |  языка
+            div.header-lines
+                .header-info
+                    .lang
+                        .lang__flag.lang__flag_ru
+                        .lang__title Rus
+                    .city Екатеринбург
+                    .time 14:55
+                    .user.no-login
+                        button#regbtn
+                            img(src=require('../../img/ico-reg.png'))
+                            | Регистрация
+                        button#loginbtn
+                            img(src=require('../../img/ico-login.png'))
+                            | Войти
+                nav.main-menu
+                    each item in menu
+                        a.main-menu__item(href=item.url)=item.title
+                    a.main-menu__item.main-menu__item_more(href='#') Еще
