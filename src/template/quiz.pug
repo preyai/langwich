@@ -1,0 +1,10 @@
+extends ./layouts/main
+include ./components/mixins
+block vars
+    -
+        const title = 'Quiz'
+block content
+    +breadcrumbs(title)
+    .container
+        h1.text-left Weekly Quiz: Belguim
+        include ./includes/quiz

@@ -1,0 +1,30 @@
+extends ./layouts/main
+include ./components/mixins
+block vars
+    -
+        const title = 'ЛэнгТоп'
+block content
+    +breadcrumbs(title)
+    .container
+        h1.text-left ЛэнгТоп
+        .lang-info.mb-4
+            .polygon-5.bgr-blue.lang-info__text
+                div
+                    p Не забывайте заглядывать в ЛэнгТоп. Развлекательное и познавательное
+                        br
+                        | содержимое обновляется еженедельно.
+            .lang-info__img
+                img(src=require('../img/lang-4.png'))
+        .langtop.mb-4
+            .langtop__list
+                .langtop__item
+                    .langtop__item_title TEST
+                    div 1
+                .langtop__item
+                    .langtop__item_tag NEW!
+                    .langtop__item_title TEST
+                    div 1
+                .langtop__item
+                    .langtop__item_tag NEW!
+                    .langtop__item_title TEST
+                    div 1

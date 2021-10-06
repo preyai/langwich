@@ -51,12 +51,12 @@
     flex-basis: calc(50% - 15px);
     padding: 2px;
     // background: #dedeed;
-    // clip-path: $polygon;
+    // @extend .polygon-1;
     filter: drop-shadow(0 0 1px #dedeed);
 
     &_wrap {
       position: relative;
-      clip-path: $polygon;
+      @extend .polygon-1;
       background-color: #fff;
       height: 100%;
       text-align: center;
@@ -131,7 +131,7 @@
     padding: 100px 20px 20px;
     margin: 0 auto;
     background-color: #f3f3fc;
-    clip-path: $polygon;
+    @extend .polygon-1;
     text-align: center;
     color: #5c5c89;
     font-size: 12px;
@@ -207,7 +207,7 @@
     .speaker-card {
 
       &__info-wrap {
-        background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+        background-image: $gradient-1;
         color: #babad3;
       }
 
@@ -253,8 +253,8 @@
   }
 
   &__wrap {
-    clip-path: $polygon;
-    background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+    @extend .polygon-1;
+    background-image: $gradient-1;
     padding: 50px;
     position: relative;
   }
@@ -351,7 +351,7 @@
     &_wrap {
       mask: url('../img/mask-0.png');
       mask-size: 100% 100%;
-      background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+      background-image: $gradient-1;
       padding: 30px;
       color: #ffffff;
       font-family: 'A _ Duckymanly . Alen . Rus', serif;

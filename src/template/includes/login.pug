@@ -1,0 +1,11 @@
+extends ../layouts/popup
+block vars
+    - const h2 = 'войти'
+block content
+    .login-form
+        .login-form__input
+            img(src=require('../../img/input-mail.png'))
+            input(placeholder='Ваш e-mail')
+        .login-form__input
+            img(src=require('../../img/input-password.png'))
+            input(placeholder='Ваш пароль')

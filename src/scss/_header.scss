@@ -52,7 +52,7 @@ header {
     letter-spacing: 0.7px;
     border-radius: 30px;
     padding: 12px 30px;
-    background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+    background-image: $gradient-1;
     position: absolute;
     top: 100%;
     margin-top: 6px;
@@ -67,7 +67,7 @@ header {
       position: absolute;
       bottom: 100%;
       left: 0;
-      background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+      background-image: $gradient-1;
       -webkit-mask-image: url("../img/arrow-mask.png");
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-position: center;

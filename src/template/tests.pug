@@ -1,0 +1,9 @@
+extends ./layouts/main
+block vars
+    -
+        const title = "Тестирование"
+block content
+    include ./components/mixins
+    +breadcrumbs(title)
+    .container.mb-4
+        h1=title

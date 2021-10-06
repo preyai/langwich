@@ -3,7 +3,7 @@ footer {
   padding-top: 40px;
   .gradient {
     background-color: #000066;
-    background-image: linear-gradient(to right, #26267d 0%, #7d265a 100%);
+    background-image: $gradient-1;
     border-radius: 20px 20px 0 0;
   }
 }
