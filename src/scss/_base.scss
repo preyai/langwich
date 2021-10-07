@@ -1468,3 +1468,88 @@ img {
     }
   }
 }
+.timepanel {
+  flex: 1;
+  border: 1px solid #dedeed;
+  border-radius: 15px;
+  color: #a2a2b9;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  &__block {
+    padding: 0 30px;
+    flex: 1;
+    &:last-child {
+      border-left: solid 2px #dedeed;
+    }
+  }
+  &__title {
+    font-size: 17px;
+    font-weight: 800;
+
+    text-align: right;
+
+
+  }
+  &__date {
+    font-size: 19px;
+    font-weight: 300;
+  }
+  &__time {
+    font-size: 52px;
+    font-weight: 300;
+  }
+}
+.classes-count {
+  background-color: #f3f3fc;
+  padding: 40px;
+  border-radius: 15px;
+  p{
+    color: #000066;
+    font-size: 19px;
+    span {
+      text-decoration: underline;
+    }
+  }
+  &__value {
+    color: #9393c3;
+    font-size: 30px;
+    font-weight: 800;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: .9;
+    >:first-child {
+      color: #000066;
+      font-size: 72px;
+      line-height: .7;
+    }
+    div {
+      >:last-child {
+        font-size: 14px;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    li {
+      width: 56px;
+      height: 12px;
+      border: 1px solid #babad3;
+      border-radius: 6px;
+      &::marker {
+        content: none;
+      }
+      &.full {
+        background-color: #000066;
+        border-color: #000066;
+      }
+      &.half {
+        background-image: linear-gradient(to right, #000066 60%, transparentize(#000066, 1) 60%)
+      }
+    }
+  }
+}
