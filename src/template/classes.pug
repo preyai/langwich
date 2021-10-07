@@ -1,9 +1,103 @@
 extends ./layouts/main
-
+include ./components/mixins
 block vars
     -
         const title = "Классы"
 
 block content
+    +breadcrumbs(title)
     .container
-        #clock
+        include ./includes/goBack
+        .class-add.mt-4
+            .class-add__line1
+                .speaker-card__avatar
+                    img(src=require('../img/speaker-0.png'))
+                div
+                    .class-add__title.mb-3 Назначить класс
+                        strong Александру
+                    .d-flex.gap-2
+                        button.btn.btn-5
+                            img(src=require('../img/ico-star.png'))
+                            | В “Мои спикеры”
+                        button.btn.btn-5
+                            img(src=require('../img/ico-star.png'))
+                            | Смотреть позже
+                        button.btn.btn-5
+                            img(src=require('../img/ico-star.png'))
+                            | Отзывы о спикере
+                            span 36
+
+            .polygon-5.bgr-blue.d-flex.p-2.gap-2.mb-6
+                div
+                    img(src=require('../img/lang-6.png'))
+                .flex-1
+                    p Учтите следующие моменты при назначения класса!
+                    p
+                        strong а)
+                        |  Назначить классы Вы можете только в ХХ:00 минут или в ХХ:30 минут. К примеру в 9:00, 9:30, 10:00, 10:30 и т.д.
+                    p
+                        strong б)
+                        |  На принятие класса, спикеру отводится 24 часа. Поэтому, на текущий день вы не сможете назначить класс, только на завтра. К примеру, если у Вас сегодня 13:00, то доступное время для назначения будет - завтра  с 13:00 (конечно, если спикер организовал расписание на завтра). Иногда спикеру может прийти несколько заявок на одно и тоже время, поэтому, пожалуйста, следите за текстовым чатом в назначеных классах, в некоторых случаях спикер может предложить Вам перенести класс на другое время и дату!
+                    p
+                        strong в)
+                        |  Лэнг-коины списываются только после начала класса, когда спикер присоединился к комнате. Учтите, у Вас есть ограничения на заявки, пропорционально текущему количеству лэнг-коинов. К примеру если у Вас 1 лэнг-коин 25 мин., Вы сможете отправить только одну заявку!
+                    p
+                        strong г)
+                        |  Время спикера автоматически отображается под Ваш выбранный регион.
+                    p Я это уже знаю (больше не показывать эту информацию)
+            .class-add__title.text-center.text-uppercase Ближайший свободный день спикера:
+                span завтра
+            .class-add__line2.mb-3
+                .clocks.flex-10
+                    .class-add__subtitle Часы работы
+                        br
+                        strong на завтра, 16 июля 2021:
+                    .d-flex
+                        #clock
+                        #clock2
+                    p
+                        strong ИСТОРИЯ:
+                    .clocks__history_list
+                        .clocks__history_item
+                            div(style="background-color: #dedeed;")
+                            | Нерабочие часы
+                        .clocks__history_item
+                            div(style="background-color: #000066;")
+                            | Рабочее время спикера
+                        .clocks__history_item
+                            div(style="background-color: #ff0000;")
+                            | Назначен Ваш класс/заявка
+                .flex-10
+                    .class-add__subtitle числовой промежуток времени
+                        br
+                        strong на завтра, 16 июля 2021:
+                    .class-add__time
+                        .class-add__time_item с 09:00 до 09:30
+                        .class-add__time_item с 09:00 до 09:30
+                        .class-add__time_item с 09:00 до 09:30
+                        .class-add__time_item с 09:00 до 09:30
+                        .class-add__time_item с 09:00 до 09:30
+
+
+
+
+            .class-add__form
+                div назначить класс
+                    br
+                    strong на завтра
+                .pay-form__input
+                    .class-add__form_title ТИП КЛАССА:
+                    label Монетка:
+                    select
+                        option 25 минут
+                        option 50 минут
+                .pay-form__input
+                    .class-add__form_title Время класса:
+                    label Продолжительность
+                    select
+                        option с 09:00 до 09:30
+                        option с 09:00 до 09:30
+                .btn.btn-3 НАЗНАЧИТЬ -1
+                    img(src=require('../img/cl-1.png'))
+    script
+        include ../js/clock.js
