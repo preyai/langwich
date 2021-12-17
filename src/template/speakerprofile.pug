@@ -1,0 +1,63 @@
+extends ./layouts/main
+include ./components/mixins
+block vars
+    -
+        const title = "Расписание"
+
+block content
+    +breadcrumbs(title)
+    .container
+        .speaker-profile
+            .speaker-profile__col-1
+                .speaker-profile__avatar
+                    img(src=require('../img/avatar-2.png'))
+
+                .speaker-profile__video.mt-4
+                    .d-flex.align-items-center.gap-2.mb-2
+                        img(src=require('../img/ico-video.png'))
+                        | Видео-приветствие спикера:
+                    img(src=require('../img/img-3.png'))
+                .speaker-profile__audio.mt-4
+                    .d-flex.align-items-center.gap-2.mb-2
+                        img(src=require('../img/ico-audio.png'))
+                        | Аудио-приветствие спикера:
+                    img(src=require('../img/audio-palyer-plch.png'))
+            .speaker-profile__col-2
+                .speaker-profile__rank Новичек
+                .speaker-profile__name.mb-2 Фамилия Имя Отчество
+                .d-flex.gap-2.mb-2
+                    .speaker-profile__balance
+                        .speaker-profile__balance_title Баланс:
+                        .speaker-profile__balance_value 1 000 000 руб.
+                    .speaker-profile__rate
+                        .speaker-profile__rate_value 15
+                        .speaker-profile__rate_title Место
+                            br
+                            | в рейтинге:
+                .d-flex.gap-2.mb-2
+                    .btn.btn-1 Загрузить фото
+                    .btn.btn-1 Редактировать профиль
+                .speaker-profile__tag
+                    .speaker-profile__tag_title Дата регистрации:
+                    .speaker-profile__tag_value 24.10.2012
+                .speaker-profile__tag
+                    .speaker-profile__tag_title Страна, город
+                    .speaker-profile__tag_value Россия, Москва
+                .speaker-profile__tag
+                    .speaker-profile__tag_title Пол:
+                    .speaker-profile__tag_value Мужской
+                .speaker-profile__tag
+                    .speaker-profile__tag_title Образование:
+                    .speaker-profile__tag_value Высшее лингвистическое
+                .speaker-profile__tag
+                    .speaker-profile__tag_title Любимые темы:
+                    .speaker-profile__tag_value Путешествия, спорт, фильмы
+                .speaker-profile__tag
+                    .speaker-profile__tag_title Владение языками:
+                    .speaker-profile__tag_value Русский, английский, португальский
+                .speaker-profile__tag
+                    .speaker-profile__tag_title Проводит классы для:
+                    .speaker-profile__tag_value Детей, подростков, взрослых
+                .speaker-profile__tag
+                    .speaker-profile__tag_title О себе:
+                    .speaker-profile__tag_value Люблю путешествовать, любоваться природой, красивыми пейзажами. Любимая цитата: “Пример недлинной цитаты”. Мечтаю побывать в Париже и Лондоне.

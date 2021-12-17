@@ -54,6 +54,7 @@ p {
     padding: 25px;
     border-radius: 15px;
   }
+
   &-uppercase {
     text-transform: uppercase;
   }
@@ -319,6 +320,7 @@ img {
     letter-spacing: 0.75px;
     text-decoration: underline dotted;
   }
+
   &-5 {
     background-color: #f3f3fc;
     padding: 15px 30px;
@@ -329,7 +331,7 @@ img {
     letter-spacing: 0.36px;
     display: flex;
     align-items: center;
-    gap:15px;
+    gap: 15px;
   }
 
   &-play {
@@ -1291,13 +1293,16 @@ img {
     cursor: pointer;
     right: 30px;
     opacity: 0.33;
+
     &:before {
       content: url("../img/ico-close.svg");
     }
+
     &:hover {
-        opacity: 1;
+      opacity: 1;
     }
   }
+
   &.active {
     width: 100%;
     height: 100%;
@@ -1337,6 +1342,7 @@ img {
       }
     }
   }
+
   .btn {
     text-align: center;
     border-radius: 30px;
@@ -1357,20 +1363,23 @@ img {
 }
 
 .class-add {
-&__line1{
-  display: flex;
-  align-items: center;
-  gap:45px;
-  .speaker-card__avatar {
-    margin: unset;
-    max-width: 200px;
-    height: 200px;
+  &__line1 {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+
+    .speaker-card__avatar {
+      margin: unset;
+      max-width: 200px;
+      height: 200px;
+    }
   }
-}
-  &__title{
+
+  &__title {
     color: #000066;
     font-size: 42px;
     font-weight: 300;
+
     span {
       background-color: #f3f3fc;
       padding: 10px 25px;
@@ -1378,6 +1387,7 @@ img {
       font-weight: 800;
     }
   }
+
   &__subtitle {
     margin-bottom: 40px;
     margin-top: 40px;
@@ -1388,16 +1398,19 @@ img {
     font-weight: 400;
     letter-spacing: 1.9px;
   }
-  &__line2{
+
+  &__line2 {
     display: flex;
   }
+
   &__time {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    &_item{
+
+    &_item {
       background-color: #f3f3fc;
       padding: 15px 20px;
       border-radius: 20px;
@@ -1405,61 +1418,72 @@ img {
       font-size: 13px;
     }
   }
+
   &__form {
     @extend .polygon-4;
     background-image: $gradient-1;
     color: #ffffff;
     display: flex;
     align-items: center;
-    gap:40px;
+    gap: 40px;
     padding: 40px;
-    >* {
+
+    > * {
       flex: auto;
     }
-    >:first-child {
+
+    > :first-child {
       color: #ffffff;
       font-size: 15px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
+
     &_title {
       color: #ffffff;
       font-size: 17px;
       text-transform: uppercase;
       letter-spacing: 1.27px;
     }
+
     select {
       border: unset;
       outline: unset;
       background: unset;
     }
+
     .btn {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       width: max-content;
+
       img {
         max-width: 30px;
       }
     }
   }
 }
+
 .clocks {
-  >.d-flex {
+  > .d-flex {
     justify-content: space-around;
   }
+
   &__history {
     &_list {
       display: flex;
       flex-wrap: wrap;
     }
-    &_item{
+
+    &_item {
       display: flex;
       gap: 12px;
       align-items: center;
       flex-basis: 50%;
       margin-bottom: 25px;
+
       div:first-child {
         width: 32px;
         height: 5px;
@@ -1468,6 +1492,7 @@ img {
     }
   }
 }
+
 .timepanel {
   flex: 1;
   border: 1px solid #dedeed;
@@ -1476,13 +1501,16 @@ img {
   display: flex;
   align-items: center;
   padding: 30px;
+
   &__block {
     padding: 0 30px;
     flex: 1;
+
     &:last-child {
       border-left: solid 2px #dedeed;
     }
   }
+
   &__title {
     font-size: 17px;
     font-weight: 800;
@@ -1491,26 +1519,32 @@ img {
 
 
   }
+
   &__date {
     font-size: 19px;
     font-weight: 300;
   }
+
   &__time {
     font-size: 52px;
     font-weight: 300;
   }
 }
+
 .classes-count {
   background-color: #f3f3fc;
   padding: 40px;
   border-radius: 15px;
-  p{
+
+  p {
     color: #000066;
     font-size: 19px;
+
     span {
       text-decoration: underline;
     }
   }
+
   &__value {
     color: #9393c3;
     font-size: 30px;
@@ -1519,37 +1553,140 @@ img {
     align-items: flex-start;
     gap: 10px;
     line-height: .9;
-    >:first-child {
+
+    > :first-child {
       color: #000066;
       font-size: 72px;
       line-height: .7;
     }
+
     div {
-      >:last-child {
+      > :last-child {
         font-size: 14px;
       }
     }
   }
+
   ul {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 15px;
+
     li {
       width: 56px;
       height: 12px;
       border: 1px solid #babad3;
       border-radius: 6px;
+
       &::marker {
         content: none;
       }
+
       &.full {
         background-color: #000066;
         border-color: #000066;
       }
+
       &.half {
         background-image: linear-gradient(to right, #000066 60%, transparentize(#000066, 1) 60%)
       }
     }
+  }
+}
+
+.speaker-profile {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+
+  &__col {
+    &-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-2 {
+
+    }
+  }
+
+
+  &__rank {
+    opacity: 0.5;
+    color: #161673;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0.85px;
+  }
+
+  &__name {
+    color: #161673;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+  }
+
+  &__balance {
+    background-color: #f3f3fc;
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: #161673;
+    font-size: 17px;
+    font-weight: 600;
+
+    &_title {
+      opacity: 0.5;
+      font-size: 13px;
+    }
+  }
+
+  &__rate {
+    background-color: #f3f3fc;
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: #161673;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.65px;
+    display: flex;
+    align-items: center;
+
+    &_value {
+      font-size: 36px;
+      opacity: 0.25;
+      font-weight: 800;
+    }
+  }
+
+  &__regdate {
+  }
+
+  &__country {
+  }
+
+  &__tag {
+    color: #161673;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.85px;
+
+    &_title {
+      opacity: 0.5;
+      font-size: 13px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__video,
+  &__audio {
+    color: #000066;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
   }
 }
